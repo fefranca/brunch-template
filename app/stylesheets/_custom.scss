@@ -1,0 +1,20 @@
+body {
+  background-color: #fff;
+}
+
+// $icon-sprite: sprite-map("icons/*.png", $new-position: 100%, $new-spacing: 15px, $new-repeat: no-repeat);
+
+@import "icons/*.png";
+@include all-icons-sprites;
+.social {
+  display: inline-block;
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+}
+
+// Compass Block
+// .compassBlock {
+//   @include block-background("../images/myimage.png");
+// }

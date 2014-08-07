@@ -1,0 +1,18 @@
+// Custom mixins
+
+// Define element as block using background image dimensions
+@mixin block-background($url){
+  display: block;
+  width: image-width($url);
+  height: image-height($url);
+  background-image: url($url);
+  background-repeat: no-repeat;
+}
+
+@mixin inline-block-background($url){
+  display: inline-block;
+  width: image-width($url);
+  height: image-height($url);
+  background-image: url($url);
+  background-repeat: no-repeat;
+}
