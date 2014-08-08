@@ -23,3 +23,8 @@ exports.config =
 
   conventions:
     ignored: [/[\\/]_/, /vendor[\\/](node|j?ruby-.*|bundle)[\\/]/, /spritesheets[\\/]/]
+
+  # Uncomment for PHP built-in webserver support
+  # server:
+  #   path: 'server-php.coffee'
+  #   port: 3333

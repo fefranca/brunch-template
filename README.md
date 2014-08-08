@@ -1,14 +1,14 @@
 Brunch Template
 ===============
 Template supporting:
-  - SASS, 
-  - Compass (+sprites), 
-  - CoffeeScript, if you like it.
+  - SASS
+  - Compass (+sprites)
+  - CoffeeScript
   - Autoprefixer
   - Source maps
   - Autoreload
   - Basic http server for REST aplications
-
+  - Optional use of PHP built in server
 
 Setup
 -----
@@ -24,6 +24,15 @@ Development
     bundle exec brunch watch --server
 
 Open your development server at [http://localhost:3333](). Remember auto-reload is enabled by default, so any changes to the project will refresh your browser.
+
+Extras
+------
+
+### PHP Support
+
+Make sure PHP 5.4 is available: `php -v`
+
+Enable support for the [PHP built in server](http://php.net/manual/en/features.commandline.webserver.php) in **config.coffee** (lines are commented out).
 
 Credits
 -------
