@@ -12,6 +12,11 @@ body {
   width: 24px;
   height: 24px;
   background-repeat: no-repeat;
+
+  // autoprefixer test
+  opacity: .5;
+  transition: all 1s linear;
+  transform: scale(0.9);
 }
 
 // Compass Block

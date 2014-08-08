@@ -16,6 +16,10 @@ exports.config =
         js: on
         css: on
         assets: on
+    autoprefixer:
+      browsers: ["last 1 version", "> 1%", "ie 8", "ie 7"]
+      options:
+        cascade: false
 
   conventions:
     ignored: [/[\\/]_/, /vendor[\\/](node|j?ruby-.*|bundle)[\\/]/, /spritesheets[\\/]/]
