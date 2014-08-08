@@ -10,6 +10,13 @@ body {
 
   // Autoprefixer should work here :)
   transform: scale(0.25);
+
+  // autoprefixer test
+  transition: all .4s ease;
+  &:hover {
+    opacity: .5;
+    transform: scale(1.0);
+  }
 }
 
 
@@ -27,7 +34,6 @@ $icons-sprite: sprite-map("spritesheets/icons/*.png");
 
 .twitter-icon {
   display: inline-block;
-  margin-right: 10px;
   background: sprite($icons-sprite, 'twitter') no-repeat;
   @include sprite-dimensions($icons-sprite, 'twitter');
 }
