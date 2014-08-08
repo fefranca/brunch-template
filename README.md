@@ -1,6 +1,14 @@
 Brunch Template
 ===============
-Template supporting SASS, Compass (+sprites), CoffeeScript and plain old JavaScript.
+Template supporting:
+  - SASS, 
+  - Compass (+sprites), 
+  - CoffeeScript, if you like it.
+  - Autoprefixer
+  - Source maps
+  - Autoreload
+  - Basic http server for REST aplications
+
 
 Setup
 -----
