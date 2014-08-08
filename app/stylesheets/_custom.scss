@@ -2,19 +2,39 @@ body {
   background-color: #fff;
 }
 
-// $icon-sprite: sprite-map("icons/*.png", $new-position: 100%, $new-spacing: 15px, $new-repeat: no-repeat);
 
-@import "icons/*.png";
-@include all-icons-sprites;
-.social {
-  display: inline-block;
-  margin-right: 10px;
-  width: 24px;
-  height: 24px;
-  background-repeat: no-repeat;
+
+.npm-logo {
+  // Mixin example (automagically gets image width/height. See _mixins.scss)
+  @include block-background("../images/npm-logo.png");
+
+  // Autoprefixer should work here :)
+  transform: scale(0.25);
 }
 
-// Compass Block
-// .compassBlock {
-//   @include block-background("../images/myimage.png");
-// }
+
+// Compass spriting example
+// http://compass-style.org/help/tutorials/spriting/
+// http://compass-style.org/reference/compass/helpers/sprites/
+
+$icons-sprite: sprite-map("spritesheets/icons/*.png");
+.facebook-icon {
+  display: inline-block;
+  margin-right: 10px;
+  background: sprite($icons-sprite, 'facebook') no-repeat;
+  @include sprite-dimensions($icons-sprite, 'facebook');
+}
+
+.twitter-icon {
+  display: inline-block;
+  margin-right: 10px;
+  background: sprite($icons-sprite, 'twitter') no-repeat;
+  @include sprite-dimensions($icons-sprite, 'twitter');
+}
+
+// Alternatively generate {spritesheet_name}-* classes
+// @import "spritesheets/icons/*.png";
+// @include all-icons-sprites;
+//
+// Remember it is possible to @extend the generated classes, e.g.
+//    @extend '.icons-facebook'
