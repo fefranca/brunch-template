@@ -1,6 +1,16 @@
-@import "compass/css3";
-@import "compass/utilities/sprites";
-@import "fonts";
-@import "mixins";
-@import "helpers";
+// Modules and Variables
+@import "partials/base";
+
+//Partials
+@import "partials/helpers";
+@import "partials/fonts";
+@import "partials/buttons";
+/* [...] */
+
+
+//Vendor - for external css and scss files
+// ex:
+// @import "vendor/colorpicker"
+
+//just for example, please delete this :)
 @import "custom";
