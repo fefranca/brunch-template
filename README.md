@@ -1,6 +1,8 @@
 Brunch Template
 ===============
+
 Template supporting:
+
   - SASS
   - Compass (+sprites)
   - CoffeeScript
