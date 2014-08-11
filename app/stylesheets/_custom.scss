@@ -44,7 +44,7 @@ $icons-sprite: sprite-map("spritesheets/icons/*.png");
 }
 
 // Alternatively generate {spritesheet_name}-* classes
-// s
+// @import "spritesheets/icons/*.png";
 // @include all-icons-sprites;
 //
 // Remember it is possible to @extend the generated classes, e.g.
