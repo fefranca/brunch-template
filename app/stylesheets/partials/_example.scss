@@ -1,8 +1,10 @@
+// Example file
+// @imported by main.scss
+// Notice this file is ignored from compilation (name begins with low dash  _ )
+
 body {
   background-color: #fff;
 }
-
-
 
 .npm-logo {
   // Mixin example (automagically gets image width/height. See _mixins.scss)

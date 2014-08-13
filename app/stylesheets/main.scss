@@ -1,6 +1,19 @@
+// Built-in Compass mixins and sprites support
 @import "compass/css3";
 @import "compass/utilities/sprites";
-@import "fonts";
+
+// Mixins and helper classes
 @import "mixins";
 @import "helpers";
-@import "custom";
+
+// Customize for your own project
+@import "fonts";
+
+// Organize partials into folders if you prefer
+// For example:
+// @import my-client/home
+// @import my-client/gallery
+@import "partials/example";
+
+// This template defaults to compiling CSS to stylesheets/main.css
+// To output multiple css files have a look at config.coffee

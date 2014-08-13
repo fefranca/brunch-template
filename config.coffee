@@ -5,9 +5,17 @@ exports.config =
 
   files:
     javascripts:
+      #
       joinTo: 'javascripts/app.js': /^(vendor|app)/
     stylesheets:
+      # By default, Brunch concatenates all files in vendor/stylesheets before all files in app/stylesheets
       joinTo: 'stylesheets/main.css'
+      # It is simple to define multiple output for complex projects
+      # joinTo:
+      #   'stylesheets/main.css': /^(app\/stylesheets\/main\.scss)/
+      #   'stylesheets/main-with-vendor.css': /^(vendor|app\/stylesheets\/main\.scss)/
+      #   'stylesheets/other.css': /^(app\/stylesheets\/other\.scss)/
+
     templates:
       joinTo: 'javascripts/app.js'
 
