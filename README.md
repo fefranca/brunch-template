@@ -1,13 +1,15 @@
 Brunch Template
 ===============
+
 Template supporting:
+
   - SASS
   - Compass (+sprites)
   - CoffeeScript
   - Autoprefixer
   - Source maps
   - Autoreload
-  - Basic http server for REST aplications
+  - Basic HTTP server for REST aplications
   - Optional use of PHP built in server
 
 Setup
@@ -33,6 +35,12 @@ Extras
 Make sure PHP 5.4 is available: `php -v`
 
 Enable support for the [PHP built in server](http://php.net/manual/en/features.commandline.webserver.php) in **config.coffee** (lines are commented out).
+
+Customization
+-------------
+
+Most customization options are located in **config.coffee**. Additional information is available at [Brunch documentation](https://github.com/brunch/brunch/blob/stable/docs/config.md).
+
 
 Credits
 -------

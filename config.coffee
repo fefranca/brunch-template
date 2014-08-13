@@ -1,5 +1,6 @@
+# See http://brunch.io/#documentation for docs.
 exports.config =
-  # See http://brunch.io/#documentation for docs.
+  # Enable notifications (on OSX uses terminal-notifier gem or Growl)
   notifications: on
 
   files:
@@ -17,11 +18,12 @@ exports.config =
         css: on
         assets: on
     autoprefixer:
-      browsers: ["last 1 version", "> 1%", "ie 8", "ie 7"]
+      browsers: ["last 1 version", "> 1%", "ie 8"]
       options:
         cascade: false
 
   conventions:
+    # Prevent copying spritesheets source images to public
     ignored: [/[\\/]_/, /vendor[\\/](node|j?ruby-.*|bundle)[\\/]/, /spritesheets[\\/]/]
 
   # Uncomment for PHP built-in webserver support
