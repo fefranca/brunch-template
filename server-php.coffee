@@ -4,7 +4,7 @@
 
 exports.startServer = (port, path, callback) ->
   spawn = require('child_process').spawn
-  child = spawn('php', ['-S', "0.0.0.0:#{port}", '-t', path], {stdio: 'pipe'});
+  child = spawn('php', ['-S', "0.0.0.0:#{port}", '-t', path], {stdio: 'inherit'});
 
   # child.stderr.on 'data', (chunk) ->
   #   console.log("error")
