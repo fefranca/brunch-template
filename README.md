@@ -2,7 +2,9 @@ Brunch Template
 ===============
 
 Template supporting:
-
+  
+  - IE9+
+  - Bower (defaults: console polyfill, jQuery and Modernizr)
   - SASS
   - Compass (+sprites)
   - CoffeeScript
@@ -16,9 +18,12 @@ Setup
 -----
 Note that NodeJS (`brew install nodejs`) and Ruby 2.0 are required.
     
-    bundle install
     npm install -g brunch
+    npm install -g bower
+
+    bundle install
     npm install
+    bower install
 
 Development
 -----------
@@ -26,6 +31,8 @@ Development
     bundle exec brunch watch --server
 
 Open your development server at [http://localhost:3333](). Remember auto-reload is enabled by default, so any changes to the project will refresh your browser.
+
+Bundler is used to solve Compass x SASS version conflicts.
 
 Extras
 ------

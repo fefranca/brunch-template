@@ -1,0 +1,20 @@
+{
+  "name": "brunch-template",
+  "repo": "fefranca/brunch-template",
+  "version": "1.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "console-polyfill": "~0.1.0",
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.3"
+  },
+  "overrides": {
+    "modernizr": {
+      "main": "modernizr.js"
+    }
+  }
+}

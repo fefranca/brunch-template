@@ -1,12 +1,23 @@
+logger = require('loggy')
+logger.notifications = ['error', 'warn', 'success']
+
 # See http://brunch.io/#documentation for docs.
 exports.config =
   # Enable notifications (on OSX uses terminal-notifier gem or Growl)
   notifications: on
+  # Sends success notifications. Comment to disable.
+  onCompile: (generatedFiles) ->
+    files = generatedFiles.map (f) -> f.path.replace(/.+\//, "")
+    files = files.join(', ')
+    logger.success("Updated #{files}")
 
   files:
     javascripts:
-      #
-      joinTo: 'javascripts/app.js': /^(vendor|app)/
+      joinTo: 
+        # 'javascripts/app.js': /^(bower_components|vendor|app)/
+        'javascripts/app.js': /^app\/javascripts/
+        'javascripts/vendor.js': /^bower_components/
+
     stylesheets:
       # By default, Brunch concatenates all files in vendor/stylesheets before all files in app/stylesheets
       joinTo: 'stylesheets/main.css'
@@ -16,8 +27,11 @@ exports.config =
       #   'stylesheets/main-with-vendor.css': /^(vendor|app\/stylesheets\/main\.scss)/
       #   'stylesheets/other.css': /^(app\/stylesheets\/other\.scss)/
 
-    templates:
-      joinTo: 'javascripts/app.js'
+  # By default non-vendor JavaScript files are encapsulated in CommonJS modules (recommended)
+  modules:
+    wrapper: 'commonjs' # Set to false to disable modules
+    definition: 'commonjs'
+    nameCleaner: (path) -> path.replace /^app\/javascripts\//, ''
 
   plugins:
     autoReload:
@@ -26,7 +40,7 @@ exports.config =
         css: on
         assets: on
     autoprefixer:
-      browsers: ["last 1 version", "> 1%", "ie 8"]
+      browsers: ["last 1 version", "ie 9"]
       options:
         cascade: false
 
